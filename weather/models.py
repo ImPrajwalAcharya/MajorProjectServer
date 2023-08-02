@@ -66,7 +66,7 @@ def create_prediction_dataset():
 
 @lru_cache(maxsize=1)
 def load_model() -> AirModel:
-    checkpoint_path = "./trainedmodel5.pth"
+    checkpoint_path = "./trainedmodel6.pth"
     model = AirModel(num_features=5)
     model.load_state_dict(torch.load(checkpoint_path))
     return model
