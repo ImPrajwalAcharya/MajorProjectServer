@@ -113,5 +113,4 @@ def make_prediction(model: AirModel, input_data_tensor):
             last_sequence = torch.cat((last_sequence[:, 1:], next_prediction[:, -1:]), dim=1)
 
     future_predictions = torch.cat(future_predictions, dim=1).numpy()
-    print(future_predictions)
     yield future_predictions
